@@ -1,6 +1,7 @@
 from random import *
 
 users = range(1, 21)
+print(users)
 print(type(users))
 users = list(users)
 
