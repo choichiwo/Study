@@ -5,15 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- css -->
+   <link rel="stylesheet" href="/CSS/s.css" type="text/css">
+   <!-- js -->
+   <script src="/Js/ss.js"></script>
 </head>
 <body>
+    <div class="display">
+        <p id="main">0</p>
+    </div>
     <div class="row">
-        <button>1</button>
-        <button>2</button>
+        <button id="d" onclick="forclear()" style="width: 138px;">c</button>
+        <button onclick="perc()">%</button>
+        <button onclick="fordisplay('/')">/</button>
+    </div>
+    <div class="row">
+        <button onclick="fordisplay('7') ">7</button>
+        <button onclick="fordisplay('8') ">8</button>
+        <button onclick="fordisplay('9') ">9</button>
+        <button onclick="fordisplay('*') ">X</button>
     </div>
     <div class="row"> 
-        <button>3</button>
-        <button>4</button>
+        <button onclick="fordisplay('4') ">4</button>
+        <button onclick="fordisplay('5') ">5</button>
+        <button onclick="fordisplay('6') ">6</button>
+        <button onclick="fordisplay('-') ">-</button>
+    </div>
+    <div class="row">
+        <button onclick="fordisplay('1') ">1</button>
+        <button onclick="fordisplay('3') ">2</button>
+        <button onclick="fordisplay('3') ">3</button>
+        <button onclick="fordisplay('+') ">+</button>
+    </div>
+    <div class="row">
+        <button onclick="fordisplay('0')" style="width: 138px;">0</button>
+        <button onclick="fordisplay('.') ">.</button>
+        <button onclick="fordisplay('=') ">=</button>
     </div>
 </body>
 </html>
