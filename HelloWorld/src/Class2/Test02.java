@@ -9,6 +9,8 @@ public class Test02 {
 		for(int i=1;i<10;i++) {
 			System.out.println(n+"x"+i+"="+(n*i));
 		}
+		//for문안에 for문을 넣어서,
+		//구구단을 2단부터 9단까지 출력
 
 	}
 
