@@ -19,18 +19,18 @@ public class Test01 {
 		//입력된 점수를 출력	
 		OutPrint(point);
 		int total=getSum(point);
-		System.out.println("학생들 총점"+sum);
-		System.out.println("학생들 평균은"+(sum/point.size()));
+		s.close();
+		System.out.println("학생들 총점"+total);
+		System.out.println("학생들 평균은"+(total/point.size()));
 		
 	}
-		
-		
+			
 		public static void OutPrint(ArrayList<Integer> point) {
 			for(int i=0; i<point.size();i++) {
 				System.out.println(point.get(i));
 			}
 		}
-		public static void getSum(ArrayList<Integer> sum) {
+		public static int getSum(ArrayList<Integer> point) {
 			int sum = 0;
 			for(int j=0;j<point.size();j++) {
 				sum=sum+point.get(j);
@@ -38,9 +38,6 @@ public class Test01 {
 			return sum;
 		}
 		
-		s.close();
-		
-
 	
 
 }
