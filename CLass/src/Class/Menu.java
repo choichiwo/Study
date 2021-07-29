@@ -21,7 +21,11 @@ public class Menu {
 		for(int i=0; i<alName.size(); i++) {
 			System.out.print(alName.get(i)+" ");
 			System.out.println(alPrice.get(i));
+			//System.out.println(this.alName.get(i)+"\t"+this.alPrice.get(i));
 		}
+//		for(String name:alName){
+//			System.out.println(name);
+//			}
 		
 		// alName, alPrice 출력.
 	}
