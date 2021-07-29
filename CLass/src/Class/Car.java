@@ -26,8 +26,8 @@ public class Car {
 	int getGuest() {
 		return this.guest;
 	}
-	void setColor(String color) {
-		this.nColor=color;
+	void setColor(String colorstr) {
+		this.nColor=colorstr;
 	}
 	String getColor() {
 		return this.nColor;

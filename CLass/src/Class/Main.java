@@ -7,7 +7,7 @@ public class Main {
 		
 		// 필드(변수) 에 직접 접근.
 		seltos.nColor="white";
-		System.out.println("색상:"+seltos.nColor());
+		System.out.println("색상:"+seltos.nColor);
 		
 		// 메소드를 통해서 필드(변수)에 접근.
 		seltos.setColor("blue");
