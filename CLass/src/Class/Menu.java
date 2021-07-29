@@ -23,9 +23,9 @@ public class Menu {
 			System.out.println(alPrice.get(i));
 			//System.out.println(this.alName.get(i)+"\t"+this.alPrice.get(i));
 		}
-//		for(String name:alName){
-//			System.out.println(name);
-//			}
+		for(String name:alName){
+			System.out.println(name);
+			}
 		
 		// alName, alPrice 출력.
 	}

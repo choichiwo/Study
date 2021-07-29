@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/Class/Main.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Users/user/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/%EC%B5%9C%EC%B9%98%EC%9B%90/Main.java</locationURI>
+		</link>
+		<link>
+			<name>src/Class/Main2.java</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Users/user/Desktop/%EC%83%88%20%ED%8F%B4%EB%8D%94/%EC%B5%9C%EC%B9%98%EC%9B%90/Main2.java</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
