@@ -20,8 +20,6 @@ public class Coffeshop {
 			case "s":
 				System.out.println("실적보기");
 				break;
-			case "x":
-				break;
 			default:
 				System.out.println("잘못 입력했습니다");
 			}
