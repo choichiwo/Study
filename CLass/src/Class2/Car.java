@@ -8,12 +8,12 @@ public class Car {
 	
 	Car(){
 		this.frontLeft=new Tire("왼쪽앞",6);
-		this.frontRight=new Tire("으른쪽앞", 2);
+		this.frontRight=new Tire("오른쪽앞", 2);
 		this.backLeft=new Tire("왼쪽뒤",3);
 		this.backRight=new Tire("오른쪽뒤", 4);
 	}
 	int run() {
-		System.out.println("자동차가 달");
+		System.out.println("자동차가 달립니다");
 		if(frontLeft.roll() ==false) {
 			stop(); return 1;
 		}
