@@ -20,6 +20,8 @@ public class Read {
 		 *   메소드 오버로딩
 		 *   생성자 오버로딩
 		 * 4.추상화(Abstraction)
+		 *   추상클래스(Abstract Class)
+		 *   인터페이스(Interface)
 		 * 
 		 *  super 위 superclass 상위클래스
 		 *  sub 아래 subclass 하위클래스   
@@ -30,6 +32,15 @@ public class Read {
 		 *        
 		 *  상속 : 부모클래스 => 자식클래스
 		 *  타입 변환: 부모클래스 <= 자식클래스     
+		 *  
+		 *  byte(1)  아래로 내려갈때는 :자동타입변환
+		 *  char(2)   int n = 400000; long l = n; //자동타입변환
+		 *  short(2)
+		 *  int(4)
+		 *  long(8)
+		 *  float(4)
+		 *  double(8) 위로 올라갈때는 : 강제타입변환 (값이 왜곡될수있음)
+		 * 	long l=10000000; int n=l; // error int n= (int) l; //강제타입변환
 		 *  
 		 *   int n = method1();
 		 *   if(n!=0) {
