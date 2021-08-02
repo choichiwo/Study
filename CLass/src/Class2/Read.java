@@ -14,8 +14,8 @@ public class Read {
 		 *   private(클래스 내부에서만 공유)-클래스의 필드
 		 * 2.상속(Inheritance)
 		 *   클래스의 속성을 다른 클래스가 물려받는것.
-		 *   메소드 오버라이딩(Method Overriding)
-		 *   생성자 오버라이딩(Constructor Overriding)
+		 *   메소드 오버라이딩(Method Overriding) 클래스라서 명칭이달라도됨
+		 *   생성자 오버라이딩(Constructor Overriding) 같은이름 메소드 무시
 		 * 3.다형성(Polymophism)
 		 *   메소드 오버로딩
 		 *   생성자 오버로딩
@@ -23,6 +23,13 @@ public class Read {
 		 * 
 		 *  super 위 superclass 상위클래스
 		 *  sub 아래 subclass 하위클래스   
+		 *  
+		 *  final 수정불가(필드) 
+		 *        상속불가(클래스)
+		 *        상속가능,재정의불가(메소드)
+		 *        
+		 *  상속 : 부모클래스 => 자식클래스
+		 *  타입 변환: 부모클래스 <= 자식클래스      
 		 */
 
 	}

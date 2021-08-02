@@ -3,7 +3,7 @@ package Class2;
 public class Test1 {
 
 	public static void main(String[] args) {
-		Animal animal = new Animal();
+		Animal animal = new Animal(2,2);
 		
 		System.out.println("눈:"+animal.eye_count);
 		System.out.println("발:"+animal.feet_count);
