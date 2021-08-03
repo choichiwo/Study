@@ -23,29 +23,30 @@ public class Coffeshop {
 				// CRUD (추가/수정/삭제)
 				System.out.println("메뉴작업을 선택하시오. (c:추가,r:목록보기,u:수정,d:삭제,q:메뉴관리 종료)");
 				// 값을 읽는다.
+				name=s1.nextLine();
 				// "q"가 아닌 동안
-					// "c":새메뉴추가 작업 출력
-					// "r":목록보기 출력
-					// "u":기존메뉴수정(이름/가격) 수정
-					// "d":기존메뉴 삭제
-					// 메뉴작업을 선택하시오(...) 출력
-					// 새값을 읽는다.
 				while(!name.equals("q")) {
 					switch(name) {
+					// "c":새메뉴추가 작업 출력
 					case "c":
 						System.out.println("새메뉴추가 작업");
 						break;
+					// "r":목록보기 출력	
 					case "r":
 						System.out.println("목록보기");
 						break;
+					// "u":기존메뉴수정(이름/가격) 수정
 					case "u":
 						System.out.println("기존메뉴수정(이름/가격)");
 						break;
+					// "d":기존메뉴 삭제
 					case "d":
 						System.out.println("기존메뉴 삭제");
 						break;	
 					}
-					System.out.println("메뉴작업을 선택하시오");
+					// 메뉴작업을 선택하시오(...) 출력
+					System.out.println("메뉴작업을 선택하시오. (c:추가,r:목록보기,u:수정,d:삭제,q:메뉴관리 종료)");
+					// 새값을 읽는다.
 					name=s1.nextLine();
 				}
 				break;
