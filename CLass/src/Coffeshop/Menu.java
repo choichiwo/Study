@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Menu { // 선언(정의) only. not 실행코드 
 	private ArrayList<String> alName;
@@ -42,14 +43,39 @@ public class Menu { // 선언(정의) only. not 실행코드
 	void addPrice(String price) {
 		this.alPrice.add(Integer.parseInt(price));
 	}
-	void changeMenu(int menu_num, String  name, int price) {
-			this.alName.set((menu_num-1), name);
-			this.alPrice.set((menu_num-1), price);
+	void appendMenu() {
+		Scanner s1 = new Scanner(System.in);
+		String name=s1.nextLine();
+		// 메뉴명 추가
+		this.addName(name);
+		// 새가격 읽기
+		name=s1.nextLine();
+		// 메뉴가격 추가
+		this.addPrice(name);
+		s1.close();
+	}
+	void changeMenu() {
+		Scanner s1 = new Scanner(System.in);
+		Scanner s2 = new Scanner(System.in);
+		int menu_num=s2.nextInt();
+		// 수정된 메뉴영 읽기
+		String name=s1.nextLine();
+		// 수정된 가격 읽기
+		int price=s2.nextInt();
+		// 메뉴번호에 해당하는 메뉴명&가격 수정.
+		this.alName.set((menu_num-1), name);
+		this.alPrice.set((menu_num-1), price);
+		s1.close();
+		s2.close();
 	}
 	
-	void deleteMenu(int menu_num) {
+	void deleteMenu() {
+		// 삭제할 메뉴번호 읽기
+		Scanner s2 = new Scanner(System.in);
+		int menu_num=s2.nextInt();
 		this.alName.remove((menu_num-1));
 		this.alPrice.remove((menu_num-1));
+		s2.close();
 	}
 	void showMenu() {
 		for(int i=0;i<this.alName.size();i++) {

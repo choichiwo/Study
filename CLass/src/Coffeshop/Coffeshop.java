@@ -33,13 +33,10 @@ public class Coffeshop {
 					case "c":
 						System.out.println("새메뉴추가 작업");
 						// 새메뉴명 읽기
-						name=s1.nextLine();
 						// 메뉴명 추가
-						menu.addName(name);
 						// 새가격 읽기
-						name=s1.nextLine();
 						// 메뉴가격 추가
-						menu.addPrice(name);
+						menu.appendMenu();
 						break;
 					// "r":목록보기 출력	
 					case "r":
@@ -50,21 +47,17 @@ public class Coffeshop {
 					case "u":
 						System.out.println("기존메뉴수정(이름/가격)");
 						// 수정할 메뉴번호 읽기
-						int menu_num=s2.nextInt();
 						// 수정된 메뉴영 읽기
-						name=s1.nextLine();
 						// 수정된 가격 읽기
-						int price=s2.nextInt();
 						// 메뉴번호에 해당하는 메뉴명&가격 수정.
-						menu.changeMenu(menu_num, name, price);
+						menu.changeMenu();
 						break;
 					// "d":기존메뉴 삭제
 					case "d":
 						System.out.println("기존메뉴 삭제");
 						// 삭제할 메뉴번호 읽기
-						menu_num=s2.nextInt();
 						// 메뉴 삭제.
-						menu.deleteMenu(menu_num);
+						menu.deleteMenu();
 						break;	
 					}
 					// 메뉴작업을 선택하시오(...) 출력
