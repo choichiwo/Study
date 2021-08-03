@@ -1,6 +1,7 @@
 package Coffeshop;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -56,18 +57,24 @@ public class Menu { // 선언(정의) only. not 실행코드
 		}
 	}
 	void save() { //arraylist alName,alPrice를 파일(menu.txt)에 저장
-		  String fileNm = "d:/menu.txt";
-	        try{
-	        	File file = new File(fileNm);
-	        	FileWriter fileWrite = new FileWriter(file, false);
-	        for(int i=0; i<alName.size(); i++) {
-	           fileWrite.write(alName.get(i)+","+alPrice.get(i)+"\n");
-	        }
-	        	fileWrite.flush(); 
-	        	fileWrite.close();
-	        } catch (Exception e){
-	        	e.printStackTrace(); 
-	        }
+		File file=new File("d:/menu.txt");
+		if(file.exists()) {
+			try {
+				BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+				for(int i=0;i<this.alName.size();i++) {
+					String line = this.alName.get(i)+","+this.alPrice.get(i);
+					writer.write(line);
+					if((i+1)!=this.alName.size())
+						writer.write("\r\n");
+				}
+				writer.flush();
+				writer.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
 	}
 	void load() { //파일(menu.txt)을 읽어서 arraylist alName,alPrice에 로드.
 		File file=new File("d:/menu.txt");
