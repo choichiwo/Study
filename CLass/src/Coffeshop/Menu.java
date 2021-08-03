@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -41,11 +42,13 @@ public class Menu { // 선언(정의) only. not 실행코드
 		this.alPrice.add(Integer.parseInt(price));
 	}
 	void changeMenu(int menu_num, String  name, int price) {
-		
+			this.alName.set((menu_num-1), name);
+			this.alPrice.set((menu_num-1), price);
 	}
 	
 	void deleteMenu(int menu_num) {
-		
+		this.alName.remove((menu_num-1));
+		this.alPrice.remove((menu_num-1));
 	}
 	void showMenu() {
 		for(int i=0;i<this.alName.size();i++) {
@@ -53,7 +56,18 @@ public class Menu { // 선언(정의) only. not 실행코드
 		}
 	}
 	void save() { //arraylist alName,alPrice를 파일(menu.txt)에 저장
-		
+		  String fileNm = "d:/menu.txt";
+	        try{
+	        	File file = new File(fileNm);
+	        	FileWriter fileWrite = new FileWriter(file, false);
+	        for(int i=0; i<alName.size(); i++) {
+	           fileWrite.write(alName.get(i)+","+alPrice.get(i)+"\n");
+	        }
+	        	fileWrite.flush(); 
+	        	fileWrite.close();
+	        } catch (Exception e){
+	        	e.printStackTrace(); 
+	        }
 	}
 	void load() { //파일(menu.txt)을 읽어서 arraylist alName,alPrice에 로드.
 		File file=new File("d:/menu.txt");
