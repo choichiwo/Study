@@ -6,13 +6,30 @@ public class Coffeshop {
 	public static void main(String[] args) {
 		Menu menu=new Menu();
 		//menu.showMenu();
+		
+		// "m":메뉴관리
+		// "o":주문
+		// "s":실적보기
+		// "x":프로그램 종료
+		
 		Scanner s1 = new Scanner(System.in);
 		String name=s1.nextLine();
-		
+		System.out.println("작업을 선택하시오 (m:메뉴관리,o:주문,s:실적보기,x:프로그램 종료)");
 		while(!name.equals("x")) {
 			switch(name) {
 			case "m":
 				System.out.println("메뉴관리");
+				menu.showMenu();
+				// CRUD (추가/수정/삭제)
+				System.out.println("메뉴작업을 선택하시오. (c:추가,r:목록보기,u:수정,q:)");
+				// 값을 읽는다.
+				// "q"가 아닌 동안
+					// "c":새메뉴추가 작업 출력
+					// "r":목록보기 출력
+					// "u":기존메뉴수정(이름/가격) 수정
+					// "d":기존메뉴 삭제
+					// 메뉴작업을 선택하시오(...) 출력
+					// 새값을 읽는다.
 				break;
 			case "o":
 				System.out.println("주문받기");
