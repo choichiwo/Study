@@ -30,18 +30,37 @@ public class Coffeshop {
 					// "c":새메뉴추가 작업 출력
 					case "c":
 						System.out.println("새메뉴추가 작업");
+						// 새메뉴명 읽기
+						name=s1.nextLine();
+						// 메뉴명 추가
+						if(!name.equals("")) {
+							menu.addName(name);
+						}
+						// 새가격 읽기
+						name=s1.nextLine();
+						// 메뉴가격 추가
+						if(!name.equals("")) {
+							menu.addPrice(name);
+						}
 						break;
 					// "r":목록보기 출력	
 					case "r":
 						System.out.println("목록보기");
+						menu.showMenu();
 						break;
 					// "u":기존메뉴수정(이름/가격) 수정
 					case "u":
 						System.out.println("기존메뉴수정(이름/가격)");
+						// 수정할 메뉴번호 읽기
+						// 수정된 메뉴영 읽기
+						// 수정된 가격 읽기
+						// 메뉴번에 해당하는 메뉴명 &가격 수정.
 						break;
 					// "d":기존메뉴 삭제
 					case "d":
 						System.out.println("기존메뉴 삭제");
+						// 삭제할 메뉴번호 읽기
+						// 메뉴 삭제.
 						break;	
 					}
 					// 메뉴작업을 선택하시오(...) 출력

@@ -40,9 +40,16 @@ public class Menu { // 선언(정의) only. not 실행코드
 	void addPrice(String price) {
 		this.alPrice.add(Integer.parseInt(price));
 	}
+	void changeMenu(int menu_num, String  name, int price) {
+		
+	}
+	
+	void deleteMenu(int menu_num) {
+		
+	}
 	void showMenu() {
 		for(int i=0;i<this.alName.size();i++) {
-			System.out.println(this.alName.get(i)+"\t"+this.alPrice.get(i));
+			System.out.println((i+1)+"\t"+this.alName.get(i)+"\t"+this.alPrice.get(i));
 		}
 	}
 	void save() { //arraylist alName,alPrice를 파일(menu.txt)에 저장
