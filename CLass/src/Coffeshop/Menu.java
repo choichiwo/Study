@@ -43,39 +43,53 @@ public class Menu { // 선언(정의) only. not 실행코드
 	void addPrice(String price) {
 		this.alPrice.add(Integer.parseInt(price));
 	}
-	void appendMenu() {
-		Scanner s1 = new Scanner(System.in);
-		String name=s1.nextLine();
+	String getName(String menu_num) {
+		return this.alName.get(Integer.parseInt(menu_num)-1);
+	}
+	int getPrice(String menu_num) {
+		return this.alPrice.get(Integer.parseInt(menu_num)-1);
+	}
+	void appendMenu(Scanner a1,Scanner a2) {	
+		String name=a1.nextLine();
+		if(name==null || name.equals("")) {
+			System.out.println("메뉴명이 비어있습니다.");
+			return;
+		}
 		// 메뉴명 추가
 		this.addName(name);
 		// 새가격 읽기
-		name=s1.nextLine();
+		int price=a2.nextInt();
+		if(price<0) {
+			System.out.println("가격이 맞지않습니다.");
+			return;
+		}
 		// 메뉴가격 추가
-		this.addPrice(name);
-		s1.close();
+		this.addPrice(price);	
 	}
-	void changeMenu() {
-		Scanner s1 = new Scanner(System.in);
-		Scanner s2 = new Scanner(System.in);
-		int menu_num=s2.nextInt();
+	void changeMenu(Scanner a1,Scanner a2) {
+		int menu_num=a2.nextInt();
 		// 수정된 메뉴영 읽기
-		String name=s1.nextLine();
+		String name=a1.nextLine();
 		// 수정된 가격 읽기
-		int price=s2.nextInt();
+		int price=a2.nextInt();
 		// 메뉴번호에 해당하는 메뉴명&가격 수정.
+		if(menu_num<1 || menu_num>this.alName.size()) {
+			System.out.println("메뉴길이보다 큰 번호가 입력됐습니다.");
+			return;
+		}
 		this.alName.set((menu_num-1), name);
 		this.alPrice.set((menu_num-1), price);
-		s1.close();
-		s2.close();
 	}
 	
-	void deleteMenu() {
+	void deleteMenu(Scanner a2) {
 		// 삭제할 메뉴번호 읽기
-		Scanner s2 = new Scanner(System.in);
-		int menu_num=s2.nextInt();
+		int menu_num=a2.nextInt();
+		if(menu_num<1 || menu_num>this.alName.size()) {
+			System.out.println("메뉴길이보다 큰 번호가 입력됐습니다.");
+			return;
+		}
 		this.alName.remove((menu_num-1));
 		this.alPrice.remove((menu_num-1));
-		s2.close();
 	}
 	void showMenu() {
 		for(int i=0;i<this.alName.size();i++) {
@@ -83,7 +97,7 @@ public class Menu { // 선언(정의) only. not 실행코드
 		}
 	}
 	void save() { //arraylist alName,alPrice를 파일(menu.txt)에 저장
-		File file=new File("d:/menu.txt");
+		File file=new File("e:/menu.txt");
 		if(file.exists()) {
 			try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter(file));
@@ -103,7 +117,7 @@ public class Menu { // 선언(정의) only. not 실행코드
 
 	}
 	void load() { //파일(menu.txt)을 읽어서 arraylist alName,alPrice에 로드.
-		File file=new File("d:/menu.txt");
+		File file=new File("e:/menu.txt");
 		if(file.exists()) {
 			BufferedReader inFile = null;
 			try {
