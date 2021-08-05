@@ -97,7 +97,7 @@ public class Menu { // 선언(정의) only. not 실행코드
 		}
 	}
 	void save() { //arraylist alName,alPrice를 파일(menu.txt)에 저장
-		File file=new File("e:/menu.txt");
+		File file=new File("d:/menu.txt");
 		if(file.exists()) {
 			try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter(file));
@@ -117,7 +117,7 @@ public class Menu { // 선언(정의) only. not 실행코드
 
 	}
 	void load() { //파일(menu.txt)을 읽어서 arraylist alName,alPrice에 로드.
-		File file=new File("e:/menu.txt");
+		File file=new File("d:/menu.txt");
 		if(file.exists()) {
 			BufferedReader inFile = null;
 			try {
