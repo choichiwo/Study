@@ -8,7 +8,7 @@ public interface RemoteControl {// for convenienc
 	public void turnOn();
 	public void turnOff();
 	public void setVolume(int volume);
-	//디폴트 메소드
+	//디폴트 메소드 == 일반클래스의 일반메소드
 	default void setMute(boolean mute) {
 		if(mute) {
 			System.out.println("무음처리합니다.");
