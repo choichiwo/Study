@@ -19,6 +19,7 @@ public class Read {
 	 *   추상클래스(Abstract class)
 	 *     메소드 오버라이딩을 이용.
 	 *     불필요한 부모클래스의 메소드 선언을 회피.
-	 *   인터페이스(Interface)       
+	 *   인터페이스(Interface)
+	 *     메소드 페이스만 제공       
 	 */
 }
