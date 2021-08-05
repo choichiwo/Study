@@ -34,7 +34,7 @@ public class Order {
 	}
 	void getBill() {
 		for(int i=0;i<this.alTotal.size();i++) {
-			System.out.println(this.alMenu.get(i)+"\t "+"총"+this.alCount.get(i)+"잔\t"+this.alTotal.get(i));
+			System.out.println((i+1)+"\t"+this.alMenu.get(i)+"\t"+"총"+this.alCount.get(i)+"잔\t"+this.alTotal.get(i));
 		}
 	}
 	void addMobile(String mobile) {

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Coffeshop {
 	public static void main(String[] args) {
-		Menu menu=new Menu();
+		Menu menu=new Menu();/
 		//menu.showMenu();
 		
 		// "m":메뉴관리
