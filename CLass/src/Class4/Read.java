@@ -27,14 +27,25 @@ public class Read {
 	 *  	메소드(내외부에서 명시적 호출)
 	 *  }
 	 *  
+	 * 	abstract class A {
+	 *  	필드(변수)
+	 *  	생성자
+	 *  	메소드
+	 *  	추상메소드(body가 없음)
+	 *  }
+	 *  
 	 *  interface I {
 	 *  	상수
 	 *  	[필드없음]
 	 *  	[생성자없음]
 	 *  	추상메소드(내외부에서 명시적 호출,body가 없음)
 	 *  	디폴트메소드(body있음 from java8)
-	 *  	정적메소드(....)
+	 *  	정적메소드(body있음 from java8)
 	 *  }  
+	 *  
+	 *  Class A{부모(상위)클래스}Class A1 extends A{자식(하위)클래스}
+	 *  abstract class A{추상클래스} class A1 extends A{실체클래스}
+	 *  interface I {인터페이스} class A1 implements I {구현클래스}
 	 *      
 	 */
 }
