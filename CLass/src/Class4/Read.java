@@ -43,9 +43,17 @@ public class Read {
 	 *  	정적메소드(body있음 from java8)
 	 *  }  
 	 *  
-	 *  Class A{부모(상위)클래스}(Parent(SuperClass)) ->  Class A1 extends A{자식(하위)클래스}(Child(SubClass))
-	 *  abstract class A{추상클래스} -> class A1 extends A{실체클래스}
-	 *  interface I {인터페이스} -> class A1 implements I {구현클래스}
+	 *  Class A{부모(상위)클래스}(Parent(SuperClass))
+	 *   ->  상속(강제타입변환) <- (자동타입변환)
+	 *   Class A1 extends A{자식(하위)클래스}(Child(SubClass))
+	 *   
+	 *  abstract class A{추상클래스} 
+	 *  ->  상속(강제타입변환) <- (자동타입변환)
+	 *   class A1 extends A{실체클래스}
+	 *   
+	 *  interface I {인터페이스} 
+	 *  ->  상속(강제타입변환) <- (자동타입변환)
+	 *  class A1 implements I {구현클래스}
 	 *      
 	 */
 }
