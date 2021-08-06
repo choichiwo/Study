@@ -54,6 +54,8 @@ public class Read {
 	 *  interface I {인터페이스} 
 	 *  ->  상속(강제타입변환) <- (자동타입변환)
 	 *  class A1 implements I {구현클래스}
+	 *  
 	 *      
+	 *  List -> ArratList al    
 	 */
 }

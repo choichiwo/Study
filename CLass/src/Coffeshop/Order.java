@@ -16,6 +16,16 @@ public class Order {
 	}
 	
 	int addOrder(String name, int cnt, String menu_num) {
+//		int total=0;
+//		try {
+//			if(balanceOfCoffee<1) {
+//				throw new CoffeeLeakException("커피가 잔량이 없네요.")
+//			}
+//			total = o*n;
+//		} catch (CoffeeLeakException e) {
+//			callHeadQuarter();
+//			System.out.println(e.getMessage());
+//		}
 		// 주문메뉴명 추가
 		this.alMenu.add(name);
 		// 주문수량 추가
@@ -24,6 +34,10 @@ public class Order {
 		Menu menu=new Menu();
 		return (menu.getPrice(menu_num)*cnt);
 	}
+	void callHeadQuarter() {
+		//.alCount;
+	}
+	
 	int getTotalSum(int total) {
 		this.alTotal.add(total);
 		int Sum =0;
