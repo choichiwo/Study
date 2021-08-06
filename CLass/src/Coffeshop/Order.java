@@ -11,7 +11,7 @@ public class Order {
 	
 	Order() {
 		alCollection = new ArrayList<Menu>();
-		alCollection.add(menu);
+		//alCollection.add(menu);
 		alMobile=new ArrayList<String>();
 		alMenu=new ArrayList<String>();
 		alCount=new ArrayList<Integer>();
