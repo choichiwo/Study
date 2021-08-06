@@ -6,9 +6,12 @@ public class Order {
 	ArrayList<String> alMobile;
 	ArrayList<String> alMenu;
 	ArrayList<Integer> alCount;
-	ArrayList<Integer> alTotal;
+	ArrayList<Integer> alTotal; //Generic( 포괄적인,일반적인)
+	ArrayList<Menu> alCollection;
 	
 	Order() {
+		alCollection = new ArrayList<Menu>();
+		alCollection.add(menu);
 		alMobile=new ArrayList<String>();
 		alMenu=new ArrayList<String>();
 		alCount=new ArrayList<Integer>();

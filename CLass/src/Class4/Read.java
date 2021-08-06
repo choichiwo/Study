@@ -57,5 +57,13 @@ public class Read {
 	 *  
 	 *      
 	 *  List -> ArratList al    
+	 *  
+	 *  ArrayList al =new ArrayList();
+	 *  al.add(10); //정수
+	 *  al.add("hello"); //문자열
+	 *  al.add(3.14); //실수
+	 *  al.add(menu); //Menu class인스턴스
+	 *  
+	 *  int[] Point
 	 */
 }
