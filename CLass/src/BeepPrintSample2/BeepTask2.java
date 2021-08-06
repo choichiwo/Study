@@ -2,8 +2,8 @@ package BeepPrintSample2;
 
 import java.awt.Toolkit;
 
-public class BeepTask implements Runnable {
-
+public class BeepTask2 extends Thread{
+	
 	@Override
 	public void run() {
 		Toolkit tk= Toolkit.getDefaultToolkit();
